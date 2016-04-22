@@ -31,3 +31,7 @@ export { default as UnderscoreHelper } from './helpers/underscore';
 export { default as UnionHelper } from './helpers/union';
 export { default as WHelper } from './helpers/w';
 export { default as WithoutHelper } from './helpers/without';
+export { default as NextHelper } from './helpers/next';
+export { default as PreviousHelper } from './helpers/previous';
+export { default as hasNextHelper } from './helpers/has-next';
+export { default as hasPreviousHelper } from './helpers/has-previous';

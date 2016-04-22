@@ -91,6 +91,10 @@ For action helpers, this will mean better currying semantics:
   + [`append`](#append)
   + [`chunk`](#chunk)
   + [`without`](#without)
+  + [`next`](#next)
+  + [`previous`](#previous)
+  + [`hasNext`](#has-next)
+  + [`hasPrevious`](#has-previous)
 * [Object](#object-helpers)
   + [`group-by`](#group-by)
 * [Math](#math-helpers)
@@ -537,6 +541,46 @@ Returns the given array without the given item(s).
 {{#each (without selectedItem items) as |remainingItem|}}
   {{remainingItem.name}}
 {{/each}}
+```
+
+**[⬆️ back to top](#available-helpers)**
+
+#### `next`
+Returns the next element in the array given the current element.
+
+```hbs
+<button onclick={{action (mut selectedItem) (next items selectedItem)}}>Next</button>
+```
+
+**[⬆️ back to top](#available-helpers)**
+
+#### `previous`
+Returns the previous element in the array given the current element.
+
+```hbs
+<button onclick={{action (mut selectedItem) (previous items selectedItem)}}>Previous</button>
+```
+
+**[⬆️ back to top](#available-helpers)**
+
+#### `hasNext`
+Checks if the array has an element after the given element.
+
+```hbs
+{{#if (hasNext pages page)}}
+  <button>Next</button>
+{{/if}}
+```
+
+**[⬆️ back to top](#available-helpers)**
+
+#### `hasPrevious`
+Checks if the array has an element before the given element.
+
+```hbs
+{{#if (hasPrevious pages page)}}
+  <button>Previous</button>
+{{/if}}
 ```
 
 **[⬆️ back to top](#available-helpers)**
